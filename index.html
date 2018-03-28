@@ -20,8 +20,9 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/#">Navbar</a>
+        <!-- Menu -->
+        <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+            <a class="navbar-brand" href="#">Feel the Breeze</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -29,41 +30,74 @@
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav mr-auto w-100 justify-content-end">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Product</a>
+                        <a class="nav-link" href="#product">Product</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Gallery</a>
+                        <a class="nav-link" href="#gallery">Gallery</a>
                     </li>
                 </ul>
             </div>
         </nav>
         
         <main role="main">
-            <div class="jumbotron">
-                <div class="flex-container">
-                    <h1 class="display-3">Hello, world!</h1>
-                    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                    <p><a class="btn btn-primary btn-lg" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/#" role="button">Learn more »</a></p>
+            <!-- Jumbotron -->
+            <div id="home" class="jumbotron text-center">
+                <div class="container">
+                    <h1 class="display-3">Feel the Breeze</h1>
+                    <br>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Purchase on Amazon</a>
                 </div>
+                
+                <div id="background"></div>
             </div>
             
-            <div class="container">
+            <!-- Product -->
+            <div id="product" class="container">
+                <div class="row">
+                    <div id="product-title" class="col text-center">
+                        <h1>Product</h1>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <h2>Heading</h2>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                        <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/#" role="button">View details »</a></p>
+                        <img id="product-img" src="product.jpg">
                     </div>
                     <div class="col-md-8">
-                        <h2>Heading</h2>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                        <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/#" role="button">View details »</a></p>
+                        <div class="card">
+                            <div class="card-header">
+                                <ul class="nav nav-tabs card-header-tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#product-about" role="tab">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#product-ingredients" role="tab">Ingredients</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#product-purchase" role="tab">Purchase</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="card-body tab-pane fade show active" id="product-about" role="tabpanel">
+                                    <h5 class="card-title">About This Product</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus varius sit amet erat vel vulputate. Nulla finibus magna id purus fringilla, non faucibus elit volutpat. Curabitur posuere auctor tellus, ut scelerisque justo lacinia quis. Etiam neque dui, viverra et magna tincidunt, lacinia lobortis lectus.</p>
+                                </div>
+                                <div class="card-body tab-pane fade" id="product-ingredients" role="tabpanel">
+                                    <h5 class="card-title">Ingredients</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus varius sit amet erat vel vulputate. Nulla finibus magna id purus fringilla, non faucibus elit volutpat. Curabitur posuere auctor tellus, ut scelerisque justo lacinia quis. Etiam neque dui, viverra et magna tincidunt, lacinia lobortis lectus.</p>
+                                </div>
+                                <div class="card-body tab-pane fade" id="product-purchase" role="tabpanel">
+                                    <h5 class="card-title">Purchase</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus varius sit amet erat vel vulputate. Nulla finibus magna id purus fringilla, non faucibus elit volutpat. Curabitur posuere auctor tellus, ut scelerisque justo lacinia quis. Etiam neque dui, viverra et magna tincidunt, lacinia lobortis lectus.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,11 +105,11 @@
         
         <!-- Footer -->
         <footer class="flex-container">
-            <p>© Company 2017-2018</p>
+            © Company 2017-2018
         </footer>
         
         <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         
         <!-- Popper -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.1/esm/popper.min.js" integrity="sha256-jPFYNe1yH5XkXflWMGOFJaeHHH7ZEzHqhxZyxsRNsuc=" crossorigin="anonymous"></script>

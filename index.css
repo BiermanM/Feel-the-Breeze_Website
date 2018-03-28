@@ -1,4 +1,35 @@
-/* Move down content because we have a fixed navbar that is 3.5rem tall */
 body {
-  padding-top: 3.5rem;
+    margin-top: 56px;
+}
+
+.navbar-nav > li{
+  padding-left:25px;
+  padding-right:25px;
+}
+
+.jumbotron {
+    height: calc(100vh - 56px);
+    width: 100vw;
+    margin-bottom: 0;
+    background-image: url("https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#product {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#product-title {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#product-img {
+    height: 400px;
 }
