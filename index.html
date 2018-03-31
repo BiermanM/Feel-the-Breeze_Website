@@ -4,17 +4,26 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="author" content="Matthew Bierman">
         
         <!-- Icon -->
         <link rel="icon" href="https://getbootstrap.com/favicon.ico">
         
         <!-- Title -->
-        <title>Jumbotron Template for Bootstrap</title>
+        <title>Feel the Breeze</title>
         
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous" />
 
+        <!-- Slick CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous" />
+        
+        <!-- Slick Default Theme CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha256-4hqlsNP9KM6+2eA8VUT0kk4RsMRTeS7QGHIM+MZ5sLY=" crossorigin="anonymous" />
+        
+        <!-- FontAwesome CSS -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+        
         <!-- CSS -->
         <link href="index.css" rel="stylesheet">
     </head>
@@ -22,14 +31,14 @@
     <body>
         <!-- Menu -->
         <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-            <a class="navbar-brand" href="#">Feel the Breeze</a>
+            <a class="navbar-brand" href="#"><img id="navbar-logo" src="Logo%20only.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav mr-auto w-100 justify-content-end">
-                    <li class="nav-item active">
+                <ul class="navbar-nav mr-auto w-100 justify-content-center">
+                    <li class="nav-item active" style="padding-left: -50px;">
                         <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
@@ -49,72 +58,198 @@
             <!-- Jumbotron -->
             <div id="home" class="jumbotron text-center">
                 <div class="container">
-                    <h1 class="display-3">Feel the Breeze</h1>
+                    <!-- <h1 id="jumbotron-title" class="display-3">Feel the Breeze</h1> -->
+                    <img id="home-logo" src="Logo%20white.png">
                     <br>
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Purchase on Amazon</a>
+                    <a id="jumbotron-btn" class="btn btn-outline-light btn-lg" href="#" role="button">PURCHASE ON AMAZON</a>
                 </div>
                 
                 <div id="background"></div>
             </div>
             
             <!-- Product -->
-            <div id="product" class="container">
+            <div id="product" class="flex-container">
                 <div class="row">
-                    <div id="product-title" class="col text-center">
-                        <h1>Product</h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <img id="product-img" src="product.jpg">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card">
-                            <div class="card-header">
-                                <ul class="nav nav-tabs card-header-tabs">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" data-toggle="tab" href="#product-about" role="tab">About</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#product-ingredients" role="tab">Ingredients</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#product-purchase" role="tab">Purchase</a>
-                                    </li>
-                                </ul>
+                    <div id="product-shampoo" class="col-md-6">
+                        <h1 id="product-title">Shampoo</h1>
+                        <div class="row">
+                            <div class="col-sm-3" style="text-align: center">
+                                <img id="product-img" src="conditioner.jpg">
                             </div>
-                            <div class="tab-content" id="myTabContent">
-                                <div class="card-body tab-pane fade show active" id="product-about" role="tabpanel">
-                                    <h5 class="card-title">About This Product</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus varius sit amet erat vel vulputate. Nulla finibus magna id purus fringilla, non faucibus elit volutpat. Curabitur posuere auctor tellus, ut scelerisque justo lacinia quis. Etiam neque dui, viverra et magna tincidunt, lacinia lobortis lectus.</p>
+                            <div id="shampoo-accordion" class="col-sm-9">
+                                <div class="card">
+                                    <button class="btn-accordian btn btn-link card-header" data-toggle="collapse" data-target="#shampoo-accordian-about">
+                                        About
+                                    </button>
+
+                                    <div id="shampoo-accordian-about" class="collapse show" data-parent="#shampoo-accordion">
+                                        <div class="card-body">
+                                            <p>With the icy cool natural mint formula, this shampoo and conditioner gives your hair more shine, nourishment from root to tip, and a cool-feeling breeze through your hair.</p>
+                                            <p>Feel the Breeze makes your hair remarkably clean, soft, lush, and gives it a healthy shine with Moroccan argan oil and white grape oil.</p>
+                                            <p>Our goal is to help you and your hair feel great.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="card-body tab-pane fade" id="product-ingredients" role="tabpanel">
-                                    <h5 class="card-title">Ingredients</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus varius sit amet erat vel vulputate. Nulla finibus magna id purus fringilla, non faucibus elit volutpat. Curabitur posuere auctor tellus, ut scelerisque justo lacinia quis. Etiam neque dui, viverra et magna tincidunt, lacinia lobortis lectus.</p>
+                                <div class="card">
+                                    <button class="btn-accordian btn btn-link card-header" data-toggle="collapse" data-target="#shampoo-accordian-howtouse">
+                                        How to Use
+                                    </button>
+
+                                    <div id="shampoo-accordian-howtouse" class="collapse" data-parent="#shampoo-accordion">
+                                        <div class="card-body">
+                                            <p>Apply shampoo on your palm, rub to make foam, then rinse out with water.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="card-body tab-pane fade" id="product-purchase" role="tabpanel">
-                                    <h5 class="card-title">Purchase</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus varius sit amet erat vel vulputate. Nulla finibus magna id purus fringilla, non faucibus elit volutpat. Curabitur posuere auctor tellus, ut scelerisque justo lacinia quis. Etiam neque dui, viverra et magna tincidunt, lacinia lobortis lectus.</p>
+                                <div class="card">
+                                    <button class="btn-accordian btn btn-link card-header" data-toggle="collapse" data-target="#shampoo-accordian-purchase">
+                                        Purchase
+                                    </button>
+
+                                    <div id="shampoo-accordian-purchase" class="collapse" data-parent="#shampoo-accordion">
+                                        <div class="card-body">
+                                            <div class="row text-center">
+                                                <div class="col-4">
+                                                    <button type="button" class="btn btn-product-purchase btn-primary btn-lg"><i class="fab fa-amazon fa-sm"></i> Amazon</button>
+                                                </div>
+                                                <div class="col-4">
+                                                    <button type="button" class="btn btn-product-purchase btn-primary btn-lg disabled" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Coming soon!"><i class="fab fa-paypal fa-sm"></i> PayPal</button>
+                                                </div>
+                                                <div class="col-4">
+                                                    <button type="button" class="btn btn-product-purchase btn-primary btn-lg disabled" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Coming soon!"><i class="far fa-credit-card fa-sm"></i> Credit</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="product-conditioner" class="col-md-6">
+                        <h1 id="product-title">Conditioner</h1>
+                        <div class="row">
+                            <div class="col-sm-3" style="text-align: center">
+                                <img id="product-img" src="conditioner.jpg">
+                            </div>
+                            <div id="conditioner-accordion" class="col-sm-9">
+                                <div class="card">
+                                    <button class="btn-accordian btn btn-link card-header" data-toggle="collapse" data-target="#conditioner-accordian-about">
+                                        About
+                                    </button>
+
+                                    <div id="conditioner-accordian-about" class="collapse show" data-parent="#conditioner-accordion">
+                                        <div class="card-body">
+                                            <p>With the icy cool natural mint formula, this shampoo and conditioner gives your hair more shine, nourishment from root to tip, and a cool-feeling breeze through your hair.</p>
+                                            <p>Feel the Breeze makes your hair remarkably clean, soft, lush, and gives it a healthy shine with Moroccan argan oil and white grape oil.</p>
+                                            <p>Our goal is to help you and your hair feel great.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <button class="btn-accordian btn btn-link card-header" data-toggle="collapse" data-target="#conditioner-accordian-howtouse">
+                                        How to Use
+                                    </button>
+
+                                    <div id="conditioner-accordian-howtouse" class="collapse" data-parent="#conditioner-accordion">
+                                        <div class="card-body">
+                                            <p>Apply to cleaned wet hair. Gently massage to hair, then rinse out with water.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <button class="btn-accordian btn btn-link card-header" data-toggle="collapse" data-target="#conditioner-accordian-purchase">
+                                        Purchase
+                                    </button>
+
+                                    <div id="conditioner-accordian-purchase" class="collapse" data-parent="#conditioner-accordion">
+                                        <div class="card-body">
+                                            <div class="row text-center">
+                                                <div class="col-4">
+                                                    <button type="button" class="btn btn-product-purchase btn-primary btn-lg"><i class="fab fa-amazon fa-sm"></i> Amazon</button>
+                                                </div>
+                                                <div class="col-4">
+                                                    <button type="button" class="btn btn-product-purchase btn-primary btn-lg disabled" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Coming soon!"><i class="fab fa-paypal fa-sm"></i> PayPal</button>
+                                                </div>
+                                                <div class="col-4">
+                                                    <button type="button" class="btn btn-product-purchase btn-primary btn-lg disabled" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Coming soon!"><i class="far fa-credit-card fa-sm"></i> Credit</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- Mission Statement -->
+            <div id="mission-statement" class="flex-container">
+                <div class="row">
+                    <div class="col text-center">
+                        <span>"Empowering individuals while giving back to those in need"</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- About -->
+            <div id="about" class="flex-container">
+                <div class="row">
+                    <div id="about-title" class="col text-center">
+                        <h1>About Me</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="about-img" class="col-md-4"></div>
+                    <div class="col-md-8">
+                        <p>Hi, my name is Lilian Meier! I am currently a junior at Faith Lutheran High school in Las Vegas, NV. I aspire to be a real estate business lawyer. On my free time I love ballroom dancing. I starting competing since I was a child. I have used this product throughout my high school career where I have performed in ballroom, gymnastic, and ice skating. It takes out all the heavy gel and hairspray buildup without stripping the moisture while keeps my hair soft, healthy, and refreshingly clean.</p>
+                        <p>How this came about was through not only giving people a chance to feel the breeze for their hair but also giving back to those in need. Two of my summers I spent two weeks volunteering in Sri Lanka. My organization gave me and a few others an opportunity of a life time at a young age. As a kid I spend my time giving back to those who are less fortunate. When I went to Sri Lanka my whole world flipped. I realized the life I live I take for granted. These kids don’t have parents, they take cold showers, they study day and night, the construction workers either work without shoes or wear flip flops without any safety gear on. The list goes on for how little they have but make the most out of it. After two weeks once it was time to go I did not want to leave. These people made me feel like family. Their kind beautiful souls opened my eyes more to the world. I wanted to do more for them in any way I can. Giving back in any way I can. My inspiration came from them. They are the root to all of this. Instead of making a big donation I started a company to give people more beneficial needs for their hair. With the money we make I also hope to put aside money to raise and give back to Sri Lanka.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gallery -->
+            <div id="gallery" class="flex-container">
+                <div id="gallery-carousel" class="row">
+                    <img class="gallery-img" src="gallery_01.jpg">
+                    <img class="gallery-img" src="gallery_02.jpg">
+                    <img class="gallery-img" src="gallery_03.jpg">
+                    <img class="gallery-img" src="gallery_04.jpg">
+                    <img class="gallery-img" src="gallery_05.jpg">
+                    <img class="gallery-img" src="gallery_06.jpg">
+                    <img class="gallery-img" src="gallery_07.jpg">
+                    <img class="gallery-img" src="gallery_08.jpg">
+                    <img class="gallery-img" src="gallery_09.jpg">
+                    <img class="gallery-img" src="gallery_10.jpg">
+                </div>
+            </div>
         </main>
         
         <!-- Footer -->
         <footer class="flex-container">
-            © Company 2017-2018
+            <div class="row">
+                <div class="col text-left footer-text">© Company 2017-2018</div>
+                <div class="col text-center">
+                    <img id="footer-bbb" src="BBB%20Logo.png">
+                </div>
+                <div class="col text-right footer-text">Created by <a href="http://bierman.io">Matthew Bierman</a></div>
+            </div>
         </footer>
         
         <!-- jQuery -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         
         <!-- Popper -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.1/esm/popper.min.js" integrity="sha256-jPFYNe1yH5XkXflWMGOFJaeHHH7ZEzHqhxZyxsRNsuc=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.1/umd/popper.min.js" integrity="sha256-AoNQZpaRmemSTxMy9xcqXX5VLwI6IMPYugO7bFHOW+U=" crossorigin="anonymous"></script>
         
         <!-- Bootstrap -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha256-5+02zu5UULQkO7w1GIr6vftCgMfFdZcAHeDtFnKZsBs=" crossorigin="anonymous"></script>
+        
+        <!-- Slick -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha256-DHF4zGyjT7GOMPBwpeehwoey18z8uiz98G4PRu2lV0A=" crossorigin="anonymous"></script>
+        
+        <!-- JavaScript -->
+        <script type="text/javascript" src="index.js"></script>
     </body>
 </html>
