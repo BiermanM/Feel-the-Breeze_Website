@@ -118,6 +118,11 @@ nav {
     height: auto;
 }
 
+.modal-gallery-img {
+    height: auto;
+    width: 100%;
+}
+
 footer {
     padding: 10px;
     background-color: rgba(63, 87, 32, 0.5);
