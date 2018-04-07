@@ -6,8 +6,20 @@
         <meta name="description" content="">
         <meta name="author" content="Matthew Bierman">
         
-        <!-- Icon -->
-        <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
         
         <!-- Title -->
         <title>Feel the Breeze</title>
@@ -30,15 +42,14 @@
 
     <body>
         <!-- Menu -->
-        <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-            <a class="navbar-brand" href="#"><img id="navbar-logo" src="Logo%20only.png"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <nav id="navbar-scrollspy" class="navbar navbar-light navbar-expand-md bg-faded fixed-top justify-content-center">
+            <a class="navbar-brand w-50 mr-auto" href=""><img id="navbar-logo" src="Icon%20Green.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav mr-auto w-100 justify-content-center">
-                    <li class="nav-item active" style="padding-left: -50px;">
+            <div class="navbar-collapse collapse w-100" id="collapsingNavbar">
+                <ul id="navbar-section-list" class="navbar-nav w-100 justify-content-center">
+                    <li class="nav-item active">
                         <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
@@ -51,130 +62,93 @@
                         <a class="nav-link" href="#gallery">Gallery</a>
                     </li>
                 </ul>
+                <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+                    <li class="nav-item">
+                        <a class="btn primary-color" href="#">Purchase</a>
+                    </li>
+                </ul>
             </div>
         </nav>
         
-        <main role="main">
-            <!-- Jumbotron -->
-            <div id="home" class="jumbotron text-center">
-                <div class="container">
-                    <!-- <h1 id="jumbotron-title" class="display-3">Feel the Breeze</h1> -->
-                    <img id="home-logo" src="Logo%20white.png">
-                    <br>
-                    <a id="jumbotron-btn" class="btn btn-outline-light btn-lg" href="#" role="button">PURCHASE ON AMAZON</a>
-                </div>
-                
-                <div id="background"></div>
+        <!-- Jumbotron -->
+        <div id="home" class="jumbotron text-center" data-parallax="scroll" data-image-src="https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6">
+            <div class="container">
+                <img id="home-logo" src="Logo%20White.png">
+                <br>
             </div>
-            
-            <!-- Product -->
-            <div id="product" class="flex-container">
+        </div>
+        
+        <!-- Scroll Down Arrow -->
+        <div id="link-down" class="text-center">
+            <div id="link-down-icon">
+                <a style="color: #fafafa;" href="#product">
+                    <i class="fa fa-2x fa-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Product -->
+        <div id="product" class="flex-container">
+            <div class="col">
                 <div class="row">
-                    <div id="product-shampoo" class="col-md-6">
-                        <h1 id="product-title">Shampoo</h1>
-                        <div class="row">
-                            <div class="col-sm-3" style="text-align: center">
-                                <img id="product-img" src="conditioner.jpg">
-                            </div>
-                            <div id="shampoo-accordion" class="col-sm-9">
-                                <div class="card">
-                                    <button class="btn-accordian btn btn-link card-header" data-toggle="collapse" data-target="#shampoo-accordian-about">
-                                        About
-                                    </button>
+                    <div class="col text-center section-title">
+                        <h1>Shampoo &amp; Conditioner</h1>
+                    </div>
+                </div>
+                <div class="row d-flex flex-wrap justify-content-center">
+                    <div class="flex-xs-wrap order-xs-1 order-sm-1 text-center" style="margin-right: 30px; margin-bottom: 30px">
+                        <img class="product-img" src="shampoo.png">
+                    </div>
+                    <div class="flex-xs-wrap order-xs-2 order-sm-3 text-center" style="margin-left: 30px; margin-bottom: 30px">
+                        <img class="product-img" src="conditioner.png">
+                    </div>
+                    <div id="product-accordion" class="col-sm-6 order-xs-3 order-sm-2">
+                        <div class="card">
+                            <button class="btn-accordian btn btn-link card-header" data-toggle="collapse" data-target="#product-accordian-about">
+                                About the Product
+                            </button>
 
-                                    <div id="shampoo-accordian-about" class="collapse show" data-parent="#shampoo-accordion">
-                                        <div class="card-body">
-                                            <p>With the icy cool natural mint formula, this shampoo and conditioner gives your hair more shine, nourishment from root to tip, and a cool-feeling breeze through your hair.</p>
-                                            <p>Feel the Breeze makes your hair remarkably clean, soft, lush, and gives it a healthy shine with Moroccan argan oil and white grape oil.</p>
-                                            <p>Our goal is to help you and your hair feel great.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <button class="btn-accordian btn btn-link card-header" data-toggle="collapse" data-target="#shampoo-accordian-howtouse">
-                                        How to Use
-                                    </button>
-
-                                    <div id="shampoo-accordian-howtouse" class="collapse" data-parent="#shampoo-accordion">
-                                        <div class="card-body">
-                                            <p>Apply shampoo on your palm, rub to make foam, then rinse out with water.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <button class="btn-accordian btn btn-link card-header" data-toggle="collapse" data-target="#shampoo-accordian-purchase">
-                                        Purchase
-                                    </button>
-
-                                    <div id="shampoo-accordian-purchase" class="collapse" data-parent="#shampoo-accordion">
-                                        <div class="card-body">
-                                            <div class="row text-center">
-                                                <div class="col-4">
-                                                    <button type="button" class="btn btn-product-purchase btn-primary btn-lg"><i class="fab fa-amazon fa-sm"></i> Amazon</button>
-                                                </div>
-                                                <div class="col-4">
-                                                    <button type="button" class="btn btn-product-purchase btn-primary btn-lg disabled" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Coming soon!"><i class="fab fa-paypal fa-sm"></i> PayPal</button>
-                                                </div>
-                                                <div class="col-4">
-                                                    <button type="button" class="btn btn-product-purchase btn-primary btn-lg disabled" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Coming soon!"><i class="far fa-credit-card fa-sm"></i> Credit</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div id="product-accordian-about" class="collapse show" data-parent="#product-accordion">
+                                <div class="card-body">
+                                    <p>With its icy cool natural mint formula, this shampoo and conditioner gives your hair more shine, nourishment from root to tip, and a cool-feeling breeze through your hair.</p>
+                                    <p>Feel the Breeze makes your hair remarkably clean, soft, and lush while giving it a healthy shine with Moroccan argan oil and white grape oil.</p>
+                                    <p>Our goal is to help you and your hair feel great.</p>
                                 </div>
                             </div>
                         </div>
-                        
-                    </div>
-                    <div id="product-conditioner" class="col-md-6">
-                        <h1 id="product-title">Conditioner</h1>
-                        <div class="row">
-                            <div class="col-sm-3" style="text-align: center">
-                                <img id="product-img" src="conditioner.jpg">
+                        <div class="card">
+                            <button class="btn-accordian btn btn-link card-header" data-toggle="collapse" data-target="#product-accordian-why">
+                                Why Choose Feel the Breeze?
+                            </button>
+
+                            <div id="product-accordian-why" class="collapse" data-parent="#product-accordion">
+                                <div class="card-body">
+                                    <p>Apply shampoo on your palm, rub to make foam, then rinse out with water.</p>
+                                </div>
                             </div>
-                            <div id="conditioner-accordion" class="col-sm-9">
-                                <div class="card">
-                                    <button class="btn-accordian btn btn-link card-header" data-toggle="collapse" data-target="#conditioner-accordian-about">
-                                        About
-                                    </button>
+                        </div>
+                        <div class="card">
+                            <button class="btn-accordian btn btn-link card-header" data-toggle="collapse" data-target="#product-accordian-purchase">
+                                How to Purchase
+                            </button>
 
-                                    <div id="conditioner-accordian-about" class="collapse show" data-parent="#conditioner-accordion">
-                                        <div class="card-body">
-                                            <p>With the icy cool natural mint formula, this shampoo and conditioner gives your hair more shine, nourishment from root to tip, and a cool-feeling breeze through your hair.</p>
-                                            <p>Feel the Breeze makes your hair remarkably clean, soft, lush, and gives it a healthy shine with Moroccan argan oil and white grape oil.</p>
-                                            <p>Our goal is to help you and your hair feel great.</p>
+                            <div id="product-accordian-purchase" class="collapse" data-parent="#product-accordion">
+                                <div class="card-body">
+                                    <div class="row text-center">
+                                        <div class="col-xs-12 col-lg-4">
+                                            <button type="button" class="btn btn-product-purchase btn-primary btn-lg">
+                                                <span><i class="fab fa-amazon fa-sm"></i> Amazon</span>
+                                            </button>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <button class="btn-accordian btn btn-link card-header" data-toggle="collapse" data-target="#conditioner-accordian-howtouse">
-                                        How to Use
-                                    </button>
-
-                                    <div id="conditioner-accordian-howtouse" class="collapse" data-parent="#conditioner-accordion">
-                                        <div class="card-body">
-                                            <p>Apply to cleaned wet hair. Gently massage to hair, then rinse out with water.</p>
+                                        <div class="col-xs-12 col-lg-4">
+                                            <button type="button" class="btn btn-product-purchase btn-primary btn-lg disabled" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Coming soon!">
+                                                <span><i class="fab fa-paypal fa-sm"></i> PayPal</span>
+                                            </button>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <button class="btn-accordian btn btn-link card-header" data-toggle="collapse" data-target="#conditioner-accordian-purchase">
-                                        Purchase
-                                    </button>
-
-                                    <div id="conditioner-accordian-purchase" class="collapse" data-parent="#conditioner-accordion">
-                                        <div class="card-body">
-                                            <div class="row text-center">
-                                                <div class="col-4">
-                                                    <button type="button" class="btn btn-product-purchase btn-primary btn-lg"><i class="fab fa-amazon fa-sm"></i> Amazon</button>
-                                                </div>
-                                                <div class="col-4">
-                                                    <button type="button" class="btn btn-product-purchase btn-primary btn-lg disabled" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Coming soon!"><i class="fab fa-paypal fa-sm"></i> PayPal</button>
-                                                </div>
-                                                <div class="col-4">
-                                                    <button type="button" class="btn btn-product-purchase btn-primary btn-lg disabled" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Coming soon!"><i class="far fa-credit-card fa-sm"></i> Credit</button>
-                                                </div>
-                                            </div>
+                                        <div class="col-xs-12 col-lg-4">
+                                            <button type="button" class="btn btn-product-purchase btn-primary btn-lg disabled" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Coming soon!">
+                                                <span><i class="far fa-credit-card fa-sm"></i> Credit</span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -183,273 +157,296 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Mission Statement -->
-            <div id="mission-statement" class="flex-container">
-                <div class="row">
-                    <div class="col text-center">
-                        <span>"Empowering individuals while giving back to those in need"</span>
-                    </div>
+        </div>
+
+        <!-- Mission Statement -->
+        <div id="mission-statement" class="flex-container" data-parallax="scroll" data-image-src="https://images.unsplash.com/photo-1505279340786-1e3b097e227a">
+            <div class="row">
+                <div class="col text-center">
+                    <span>"Empowering individuals while giving back to those in need"</span>
                 </div>
             </div>
-            
-            <!-- About -->
-            <div id="about" class="flex-container">
-                <div class="row">
-                    <div id="about-title" class="col text-center">
-                        <h1>About Me</h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div id="about-img" class="col-md-4"></div>
-                    <div class="col-md-8">
-                        <p>Hi, my name is Lilian Meier! I am currently a junior at Faith Lutheran High school in Las Vegas, NV. I aspire to be a real estate business lawyer. On my free time I love ballroom dancing. I starting competing since I was a child. I have used this product throughout my high school career where I have performed in ballroom, gymnastic, and ice skating. It takes out all the heavy gel and hairspray buildup without stripping the moisture while keeps my hair soft, healthy, and refreshingly clean.</p>
-                        <p>How this came about was through not only giving people a chance to feel the breeze for their hair but also giving back to those in need. Two of my summers I spent two weeks volunteering in Sri Lanka. My organization gave me and a few others an opportunity of a life time at a young age. As a kid I spend my time giving back to those who are less fortunate. When I went to Sri Lanka my whole world flipped. I realized the life I live I take for granted. These kids don’t have parents, they take cold showers, they study day and night, the construction workers either work without shoes or wear flip flops without any safety gear on. The list goes on for how little they have but make the most out of it. After two weeks once it was time to go I did not want to leave. These people made me feel like family. Their kind beautiful souls opened my eyes more to the world. I wanted to do more for them in any way I can. Giving back in any way I can. My inspiration came from them. They are the root to all of this. Instead of making a big donation I started a company to give people more beneficial needs for their hair. With the money we make I also hope to put aside money to raise and give back to Sri Lanka.</p>
-                    </div>
+        </div>
+
+        <!-- About -->
+        <div id="about" class="flex-container">
+            <div class="row">
+                <div class="col text-center section-title">
+                    <h1>About Me</h1>
                 </div>
             </div>
-            
-            <!-- Gallery -->
-            <div id="gallery" class="flex-container">
-                <div id="gallery-carousel" class="row">
-                    <img class="gallery-img" src="gallery_01.jpg" data-toggle="modal" data-target="#gallery-modal-1">
-                    <img class="gallery-img" src="gallery_02.jpg" data-toggle="modal" data-target="#gallery-modal-2">
-                    <img class="gallery-img" src="gallery_03.jpg" data-toggle="modal" data-target="#gallery-modal-3">
-                    <img class="gallery-img" src="gallery_04.jpg" data-toggle="modal" data-target="#gallery-modal-4">
-                    <img class="gallery-img" src="gallery_05.jpg" data-toggle="modal" data-target="#gallery-modal-5">
-                    <img class="gallery-img" src="gallery_06.jpg" data-toggle="modal" data-target="#gallery-modal-6">
-                    <img class="gallery-img" src="gallery_07.jpg" data-toggle="modal" data-target="#gallery-modal-7">
-                    <img class="gallery-img" src="gallery_08.jpg" data-toggle="modal" data-target="#gallery-modal-8">
-                    <img class="gallery-img" src="gallery_09.jpg" data-toggle="modal" data-target="#gallery-modal-9">
-                    <img class="gallery-img" src="gallery_10.jpg" data-toggle="modal" data-target="#gallery-modal-10">
-                    <img class="gallery-img" src="gallery_11.jpg" data-toggle="modal" data-target="#gallery-modal-10">
-                    <img class="gallery-img" src="gallery_12.jpg" data-toggle="modal" data-target="#gallery-modal-10">
-                    <img class="gallery-img" src="gallery_13.jpg" data-toggle="modal" data-target="#gallery-modal-10">
+            <div class="row">
+                <div id="about-left" class="col-lg-4 text-center">
+                    <img id="about-img" src="about.jpg">
+                    <div id="about-social-links">
+                        <i class="fas fa-envelope sm-icon"></i>
+                        <i class="fas fa-phone-square sm-icon"></i>
+                        <i class="fab fa-facebook sm-icon"></i>
+                    </div>
+                    <a id="about-btn" class="btn btn-lg primary-color" href="#">Contact Me</a>
+                </div>
+                <div class="col-lg-8">
+                    <p>Hi, my name is Lilian Meier! I am currently a junior at Faith Lutheran High School in Las Vegas, NV. After college, I plan to pursue a career in real estate law. I have used Feel the Breeze Shampoo &amp; Conditioner throughout my high school career, where I have performed in ballroom, gymnastic, and ice skating. It takes out all the heavy gel and hairspray buildup while keeping my hair soft, healthy, and refreshingly clean!</p>
+                    
+                    <p>My inspiration for founding Feel the Breeze started two years ago, when I spent my summer break volunteering in Sri Lanka. I joined an organization that gave a few of my peers and I the opportunity of a lifetime. Throughout my childhood, I often spent time giving back to others in my community, but my time in Sri Lanka was entirely different. It completely changed how I looked at the world, causing me to realize how much I take for granted every single day. The children I met didn't have parents, took cold showers every day, studied day and night, and construction workers wore no safety gear, much less shoes.</p>
+                    
+                    <p>Despite all this, they took every opportunity to make feel like family. Their kind, beautiful soulds opened my eyes to the world beyond my life in Las Vegas. By starting Feel the Breeze, I now have the opportunity to share the love that the children in Sri Lanka shared with me. Feel the Breeze's Shampoo &amp; Conditioner nourishes your hair with a healthy shine and the proceeds from this product go towards the children of Sri Lanka, so they may have a brighter future.</p>
                 </div>
             </div>
-        </main>
+        </div>
+
+        <!-- Gallery -->
+        <div id="gallery" class="flex-container">
+            <div id="gallery-carousel" class="row custom-slick">
+                <img class="gallery-img" src="gallery_01.jpg" data-toggle="modal" data-target="#gallery-modal-1">
+                <img class="gallery-img" src="gallery_02.jpg" data-toggle="modal" data-target="#gallery-modal-2">
+                <img class="gallery-img" src="gallery_03.jpg" data-toggle="modal" data-target="#gallery-modal-3">
+                <img class="gallery-img" src="gallery_04.jpg" data-toggle="modal" data-target="#gallery-modal-4">
+                <img class="gallery-img" src="gallery_05.jpg" data-toggle="modal" data-target="#gallery-modal-5">
+                <img class="gallery-img" src="gallery_06.jpg" data-toggle="modal" data-target="#gallery-modal-6">
+                <img class="gallery-img" src="gallery_07.jpg" data-toggle="modal" data-target="#gallery-modal-7">
+                <img class="gallery-img" src="gallery_08.jpg" data-toggle="modal" data-target="#gallery-modal-8">
+                <img class="gallery-img" src="gallery_09.jpg" data-toggle="modal" data-target="#gallery-modal-9">
+                <img class="gallery-img" src="gallery_10.jpg" data-toggle="modal" data-target="#gallery-modal-10">
+                <img class="gallery-img" src="gallery_11.jpg" data-toggle="modal" data-target="#gallery-modal-11">
+                <img class="gallery-img" src="gallery_12.jpg" data-toggle="modal" data-target="#gallery-modal-12">
+                <img class="gallery-img" src="gallery_13.jpg" data-toggle="modal" data-target="#gallery-modal-13">
+            </div>
+        </div>
         
         <!-- Footer -->
         <footer class="flex-container">
-            <div class="row">
-                <div class="col text-left footer-text">© Company 2017-2018</div>
-                <div class="col text-center">
-                    <img id="footer-bbb" src="BBB%20Logo.png">
+            <div class="col">
+                <div class="row">
+                    <div id="footer-left-text" class="col text-left">&copy; Feel the Breeze 2018</div>
+                    <div class="col text-center">
+                        <img id="footer-bbb" src="BBB%20Logo.png">
+                    </div>
+                    <div id="footer-right-text" class="col text-right">Created by <a id="footer-link" href="http://bierman.io">Matthew Bierman</a></div>
                 </div>
-                <div class="col text-right footer-text">Created by <a href="http://bierman.io">Matthew Bierman</a></div>
             </div>
         </footer>
         
-        <!-- Modal for Image #1 of Gallery -->
-        <div class="modal fade" id="gallery-modal-1" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+        
+        
+        <!-- Modals -->
+        <div>
+            <!-- Modal for Image #1 of Gallery -->
+            <div class="modal fade" id="gallery-modal-1" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="modal-gallery-img" src="gallery_01.jpg">
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <img class="modal-gallery-img" src="gallery_01.jpg">
+                </div>
+            </div>
+
+            <!-- Modal for Image #2 of Gallery -->
+            <div class="modal fade" id="gallery-modal-2" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="modal-gallery-img" src="gallery_02.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Image #3 of Gallery -->
+            <div class="modal fade" id="gallery-modal-3" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="modal-gallery-img" src="gallery_03.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Image #4 of Gallery -->
+            <div class="modal fade" id="gallery-modal-4" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="modal-gallery-img" src="gallery_04.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Image #5 of Gallery -->
+            <div class="modal fade" id="gallery-modal-5" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="modal-gallery-img" src="gallery_05.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Image #6 of Gallery -->
+            <div class="modal fade" id="gallery-modal-6" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="modal-gallery-img" src="gallery_06.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Image #7 of Gallery -->
+            <div class="modal fade" id="gallery-modal-7" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="modal-gallery-img" src="gallery_07.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Image #8 of Gallery -->
+            <div class="modal fade" id="gallery-modal-8" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="modal-gallery-img" src="gallery_08.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Image #9 of Gallery -->
+            <div class="modal fade" id="gallery-modal-9" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="modal-gallery-img" src="gallery_09.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Image #10 of Gallery -->
+            <div class="modal fade" id="gallery-modal-10" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="modal-gallery-img" src="gallery_10.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Image #11 of Gallery -->
+            <div class="modal fade" id="gallery-modal-11" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="modal-gallery-img" src="gallery_11.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Image #12 of Gallery -->
+            <div class="modal fade" id="gallery-modal-12" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="modal-gallery-img" src="gallery_12.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Image #13 of Gallery -->
+            <div class="modal fade" id="gallery-modal-13" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="modal-gallery-img" src="gallery_13.jpg">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- Modal for Image #2 of Gallery -->
-        <div class="modal fade" id="gallery-modal-2" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <img class="modal-gallery-img" src="gallery_02.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
         
-        <!-- Modal for Image #3 of Gallery -->
-        <div class="modal fade" id="gallery-modal-3" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <img class="modal-gallery-img" src="gallery_03.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Modal for Image #4 of Gallery -->
-        <div class="modal fade" id="gallery-modal-4" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <img class="modal-gallery-img" src="gallery_04.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Modal for Image #5 of Gallery -->
-        <div class="modal fade" id="gallery-modal-5" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <img class="modal-gallery-img" src="gallery_05.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Modal for Image #6 of Gallery -->
-        <div class="modal fade" id="gallery-modal-6" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <img class="modal-gallery-img" src="gallery_06.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Modal for Image #7 of Gallery -->
-        <div class="modal fade" id="gallery-modal-7" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <img class="modal-gallery-img" src="gallery_07.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Modal for Image #8 of Gallery -->
-        <div class="modal fade" id="gallery-modal-8" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <img class="modal-gallery-img" src="gallery_08.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Modal for Image #9 of Gallery -->
-        <div class="modal fade" id="gallery-modal-9" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <img class="modal-gallery-img" src="gallery_09.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Modal for Image #10 of Gallery -->
-        <div class="modal fade" id="gallery-modal-10" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <img class="modal-gallery-img" src="gallery_10.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Modal for Image #11 of Gallery -->
-        <div class="modal fade" id="gallery-modal-11" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <img class="modal-gallery-img" src="gallery_11.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Modal for Image #12 of Gallery -->
-        <div class="modal fade" id="gallery-modal-12" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <img class="modal-gallery-img" src="gallery_12.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Modal for Image #13 of Gallery -->
-        <div class="modal fade" id="gallery-modal-13" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <img class="modal-gallery-img" src="gallery_13.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
         
         <!-- jQuery -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        
+        <!-- jQuery Transit -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js" integrity="sha256-rqEXy4JTnKZom8mLVQpvni3QHbynfjPmPxQVsPZgmJY=" crossorigin="anonymous"></script>
         
         <!-- Popper -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.1/umd/popper.min.js" integrity="sha256-AoNQZpaRmemSTxMy9xcqXX5VLwI6IMPYugO7bFHOW+U=" crossorigin="anonymous"></script>
@@ -459,6 +456,9 @@
         
         <!-- Slick -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha256-DHF4zGyjT7GOMPBwpeehwoey18z8uiz98G4PRu2lV0A=" crossorigin="anonymous"></script>
+        
+        <!-- Parallax -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js" integrity="sha256-Jhqqct9kdspgS5FC1W1f/cBOkdDoWMV3eWhU14cqzoY=" crossorigin="anonymous"></script>
         
         <!-- JavaScript -->
         <script type="text/javascript" src="index.js"></script>
