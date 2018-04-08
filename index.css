@@ -5,6 +5,20 @@ body {
     overflow-y: scroll;
 }
 
+#mission-statement-text {
+    font-family: 'Arima Madurai', cursive;
+    font-size: 150%;
+}
+
+.title-text {
+    font-family: 'Exo', sans-serif;
+    font-size: 50px;
+}
+
+.body-text {
+    font-family: 'Open Sans', sans-serif;
+}
+
 nav {
     background-color: #fafafa;
     border-bottom: 1px solid #dddddd;
@@ -47,14 +61,43 @@ nav {
 }
 
 .primary-color {
-    color: #27958b;
+    color: #fafafa;
     border-color: #27958b;
+    background-color: #27958b;
 }
 
-.primary-color:hover {
-    color: #fafafa;
+.primary-color:hover, .primary-color:active {
+    color: #fafafa !important;
+    border-color: #207e76 !important;
+    background-color: #207e76 !important;
+}
+
+.primary-color-icon {
+    color: #27958b;
+    background-color: #fafafa;
+}
+
+.primary-color-icon:hover {
+    color: #207e76;
+    background-color: #fafafa;
+}
+
+.primary-color-outline {
+    color: #27958b !important;
+    border-color: #27958b;
+    background-color: #fafafa;
+}
+
+.primary-color-outline:hover {
+    color: #fafafa !important;
     background-color: #27958b;
     border-color: #fafafa;
+}
+
+.primary-color-disabled, .primary-color-disabled:hover, .primary-color-disabled:active {
+    color: #fafafa !important;
+    border-color: #9cd8d2 !important;
+    background-color: #9cd8d2 !important;
 }
 
 .jumbotron {
@@ -131,6 +174,28 @@ nav {
     margin: 5px;
 }
 
+#bbb-logo {
+    margin-top: 25px;
+    max-height: 50px;
+    margin-bottom: 25px;
+}
+
+#qg-logo {
+    max-height: 100px;
+}
+
+@media (max-width: 576px) and (min-width: 767px) {
+    #bbb-logo {
+        margin-top: 12.5px;
+        max-height: 25px;
+        margin-bottom: 12.5px;
+    }
+
+    #qg-logo {
+        max-height: 50px;
+    }
+}
+
 #mission-statement {
     font-size: 30px;
     color: white;
@@ -181,6 +246,10 @@ nav {
     margin-top: 15px;
 }
 
+#about-btn {
+    width: 150px;
+}
+
 #gallery {
     background-color: #f7f7f7;
 }
@@ -208,10 +277,6 @@ footer {
     padding-top: 16px;
 }
 
-#footer-bbb {
-    max-height: 50px;
-}
-
 #footer-link {
     color: #27958b;
     text-decoration: none;
@@ -233,4 +298,13 @@ footer {
     font-family: 'FontAwesome';
     font-size: 22px;
     color: #b3b3b3;
+}
+
+#contactModalName, #contactModalEmail, #contactModalPhone, #contactModalWebsite, #contactModalBody {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#nameError, #emailError, #bodyError {
+    display: none;
 }

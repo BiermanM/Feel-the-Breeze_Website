@@ -36,13 +36,16 @@
         <!-- FontAwesome CSS -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
         
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Arima+Madurai:300|Exo:500|Open+Sans" rel="stylesheet">
+        
         <!-- CSS -->
         <link href="index.css" rel="stylesheet">
     </head>
 
     <body>
         <!-- Menu -->
-        <nav id="navbar-scrollspy" class="navbar navbar-light navbar-expand-md bg-faded fixed-top justify-content-center">
+        <nav id="navbar-scrollspy" class="navbar navbar-light navbar-expand-md bg-faded fixed-top justify-content-center body-text">
             <a class="navbar-brand w-50 mr-auto" href=""><img id="navbar-logo" src="Icon%20Green.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -64,7 +67,7 @@
                 </ul>
                 <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
                     <li class="nav-item">
-                        <a class="btn primary-color" href="#">Purchase</a>
+                        <a class="btn primary-color-outline" href="http://bierman.io/404">Purchase</a>
                     </li>
                 </ul>
             </div>
@@ -92,10 +95,10 @@
             <div class="col">
                 <div class="row">
                     <div class="col text-center section-title">
-                        <h1>Shampoo &amp; Conditioner</h1>
+                        <h1 class="title-text">Shampoo &amp; Conditioner</h1>
                     </div>
                 </div>
-                <div class="row d-flex flex-wrap justify-content-center">
+                <div class="row d-flex flex-wrap justify-content-center body-text">
                     <div class="flex-xs-wrap order-xs-1 order-sm-1 text-center" style="margin-right: 30px; margin-bottom: 30px">
                         <img class="product-img" src="shampoo.png">
                     </div>
@@ -107,7 +110,6 @@
                             <button class="btn-accordian btn btn-link card-header" data-toggle="collapse" data-target="#product-accordian-about">
                                 About the Product
                             </button>
-
                             <div id="product-accordian-about" class="collapse show" data-parent="#product-accordion">
                                 <div class="card-body">
                                     <p>With its icy cool natural mint formula, this shampoo and conditioner gives your hair more shine, nourishment from root to tip, and a cool-feeling breeze through your hair.</p>
@@ -123,7 +125,17 @@
 
                             <div id="product-accordian-why" class="collapse" data-parent="#product-accordion">
                                 <div class="card-body">
-                                    <p>Apply shampoo on your palm, rub to make foam, then rinse out with water.</p>
+                                    <div class="row">
+                                        <p style="padding-left: 20px; padding-right: 20px">At Feel the Breeze, we want you to be fully satisfied with our product. With our 30-day money back guarantee, you can return the product for a full refund, no questions asked!</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <img id="qg-logo" src="Quality%20Guaranteed.png">
+                                        </div>
+                                        <div class="col text-center">
+                                            <img id="bbb-logo" src="BBB%20Logo.png">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -136,17 +148,15 @@
                                 <div class="card-body">
                                     <div class="row text-center">
                                         <div class="col-xs-12 col-lg-4">
-                                            <button type="button" class="btn btn-product-purchase btn-primary btn-lg">
-                                                <span><i class="fab fa-amazon fa-sm"></i> Amazon</span>
-                                            </button>
+                                            <a class="btn btn-product-purchase btn-primary btn-lg primary-color" href="http://bierman.io/404"><i class="fab fa-amazon fa-sm"></i> Amazon</a>
                                         </div>
                                         <div class="col-xs-12 col-lg-4">
-                                            <button type="button" class="btn btn-product-purchase btn-primary btn-lg disabled" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Coming soon!">
+                                            <button type="button" class="btn btn-product-purchase btn-primary btn-lg primary-color-disabled" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Coming soon!">
                                                 <span><i class="fab fa-paypal fa-sm"></i> PayPal</span>
                                             </button>
                                         </div>
                                         <div class="col-xs-12 col-lg-4">
-                                            <button type="button" class="btn btn-product-purchase btn-primary btn-lg disabled" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Coming soon!">
+                                            <button type="button" class="btn btn-product-purchase btn-primary btn-lg primary-color-disabled" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Coming soon!">
                                                 <span><i class="far fa-credit-card fa-sm"></i> Credit</span>
                                             </button>
                                         </div>
@@ -163,7 +173,7 @@
         <div id="mission-statement" class="flex-container" data-parallax="scroll" data-image-src="https://images.unsplash.com/photo-1505279340786-1e3b097e227a">
             <div class="row">
                 <div class="col text-center">
-                    <span>"Empowering individuals while giving back to those in need"</span>
+                    <span id="mission-statement-text">"Empowering individuals while giving back to those in need"</span>
                 </div>
             </div>
         </div>
@@ -172,18 +182,18 @@
         <div id="about" class="flex-container">
             <div class="row">
                 <div class="col text-center section-title">
-                    <h1>About Me</h1>
+                    <h1 class="title-text">About Me</h1>
                 </div>
             </div>
-            <div class="row">
+            <div class="row body-text">
                 <div id="about-left" class="col-lg-4 text-center">
                     <img id="about-img" src="about.jpg">
                     <div id="about-social-links">
-                        <i class="fas fa-envelope sm-icon"></i>
-                        <i class="fas fa-phone-square sm-icon"></i>
-                        <i class="fab fa-facebook sm-icon"></i>
+                        <a class="primary-color-icon" href="http://bierman.io/404"><i class="fas fa-2x fa-envelope sm-icon"></i></a>
+                        <a class="primary-color-icon" href="http://bierman.io/404"><i class="fas fa-2x fa-phone-square sm-icon"></i></a>
+                        <a class="primary-color-icon" href="http://bierman.io/404"><i class="fab fa-2x fa-facebook sm-icon"></i></a>
                     </div>
-                    <a id="about-btn" class="btn btn-lg primary-color" href="#">Contact Me</a>
+                    <a id="about-btn" class="btn btn-lg primary-color-outline" data-toggle="modal" data-target="#contact-form">Contact Me</a>
                 </div>
                 <div class="col-lg-8">
                     <p>Hi, my name is Lilian Meier! I am currently a junior at Faith Lutheran High School in Las Vegas, NV. After college, I plan to pursue a career in real estate law. I have used Feel the Breeze Shampoo &amp; Conditioner throughout my high school career, where I have performed in ballroom, gymnastic, and ice skating. It takes out all the heavy gel and hairspray buildup while keeping my hair soft, healthy, and refreshingly clean!</p>
@@ -218,11 +228,8 @@
         <footer class="flex-container">
             <div class="col">
                 <div class="row">
-                    <div id="footer-left-text" class="col text-left">&copy; Feel the Breeze 2018</div>
-                    <div class="col text-center">
-                        <img id="footer-bbb" src="BBB%20Logo.png">
-                    </div>
-                    <div id="footer-right-text" class="col text-right">Created by <a id="footer-link" href="http://bierman.io">Matthew Bierman</a></div>
+                    <div class="col text-left body-text">&copy; Feel the Breeze 2018. All Rights Reserved.</div>
+                    <div class="col text-right body-text">Created by <a id="footer-link" href="http://bierman.io">Matthew Bierman</a></div>
                 </div>
             </div>
         </footer>
@@ -435,6 +442,63 @@
                         <div class="modal-body">
                             <img class="modal-gallery-img" src="gallery_13.jpg">
                         </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form Modal -->
+            <div class="modal fade" id="contact-form" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <form id="form" action="https://formspree.io/ftbreeze@gmail.com" method="POST">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Contact Me</h5>
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <div class="row form-group" style="margin-bottom: 0">
+                                        <div id="contactModalName" class="col-sm">
+                                            <div class="form-group" style="margin-bottom: 0px">
+                                                <input id="nameInput" type="text" class="form-control" name="name" placeholder="Full Name">
+                                                <div id="nameError" class="form-control-feedback">Please fill out this field.</div>
+                                            </div>
+                                        </div>
+                                        <div id="contactModalEmail" class="col-sm">
+                                            <div class="form-group" style="margin-bottom: 0px">
+                                                <input id="emailInput" type="email" class="form-control" name="_replyto" placeholder="Email Address">
+                                                <div id="emailError" class="form-control-feedback">Please fill out this field.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group" style="margin-bottom: 0">
+                                        <div id="contactModalPhone" class="col-sm">
+                                            <div class="form-group" style="margin-bottom: 0px">
+                                                <input type="text" class="form-control" name="phoneNumber" placeholder="Phone Number">
+                                            </div>
+                                        </div>
+                                        <div id="contactModalWebsite" class="col-sm">
+                                            <div class="form-group" style="margin-bottom: 0px">
+                                                <input id="websiteInput" type="text" class="form-control" name="website" placeholder="Website">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group" style="margin-bottom: 0">
+                                        <div id="contactModalBody" class="col-sm">
+                                            <div class="form-group" style="margin-bottom: 0px">
+                                                <textarea id="bodyInput" class="form-control" rows="5" name="message" placeholder="Ask me a question, express any concerns you may have, or just say hi!"></textarea>
+                                                <div id="bodyError" class="form-control-feedback">Please fill out this field.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button id="sendEmail" type="submit" class="btn primary-color" value="Send">Send</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
