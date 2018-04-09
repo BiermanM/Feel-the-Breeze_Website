@@ -288,6 +288,20 @@ footer {
 }
 
 .custom-slick .slick-prev:before {
+    content: "\f053";
+    font-family: 'FontAwesome';
+    font-size: 22px;
+    color: #b3b3b3;
+}
+.custom-slick .slick-next:before {
+    content: "\f054";
+    font-family: 'FontAwesome';
+    font-size: 22px;
+    color: #b3b3b3;
+}
+
+/*
+.custom-slick .slick-prev:before {
     content: "";
     font-family: 'FontAwesome';
     font-size: 22px;
@@ -299,6 +313,7 @@ footer {
     font-size: 22px;
     color: #b3b3b3;
 }
+*/
 
 #contactModalName, #contactModalEmail, #contactModalPhone, #contactModalWebsite, #contactModalBody {
     margin-top: 5px;
