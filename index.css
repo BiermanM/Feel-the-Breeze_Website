@@ -302,21 +302,6 @@ footer {
     color: #b3b3b3;
 }
 
-/*
-.custom-slick .slick-prev:before {
-    content: "";
-    font-family: 'FontAwesome';
-    font-size: 22px;
-    color: #b3b3b3;
-}
-.custom-slick .slick-next:before {
-    content: "";
-    font-family: 'FontAwesome';
-    font-size: 22px;
-    color: #b3b3b3;
-}
-*/
-
 #contactModalName, #contactModalEmail, #contactModalPhone, #contactModalWebsite, #contactModalBody {
     margin-top: 5px;
     margin-bottom: 5px;
