@@ -32,6 +32,7 @@ $("#link-down-icon").click(function(e) {
 
 $(window).resize(function() {
     fixProduct();
+    menuSizing();
 });
 
 function fixProduct() {
@@ -54,9 +55,22 @@ function fixProduct() {
         $(".title-text").css("font-size", 50);
 }
 
+function menuSizing() {
+    if ($(window).width() > 767) {
+        $("#navbar-section-list").css("padding-left", (($("#navbar-scrollspy").width() / 2) - ($("#navbar-section-list").width() / 2) - $(".navbar-brand").width()));
+        $("#navbar-section-list").css("padding-right", (($("#navbar-scrollspy").width() / 2) - ($("#navbar-section-list").width() / 2) - $("#navbar-button").width()));
+        
+        if ($(window).width() - 60 != $("#navbar-scrollspy").width()) {
+            $("#navbar-section-list").css("padding-left", parseFloat($("#navbar-section-list").css("padding-left")) - 30);
+            $("#navbar-section-list").css("padding-right", parseFloat($("#navbar-section-list").css("padding-right")) - 30);
+        }
+    }
+}
+
 // Enable gallery
 $(document).ready(function() {
     fixProduct();
+    menuSizing();
     
     $('#gallery-carousel').slick({
         dots: true,
