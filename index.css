@@ -60,9 +60,9 @@ nav {
 }
 
 .primary-color {
-    color: #fafafa;
-    border-color: #27958b;
-    background-color: #27958b;
+    color: #fafafa !important;
+    border-color: #27958b !important;
+    background-color: #27958b !important;
 }
 
 .primary-color:hover, .primary-color:active {
