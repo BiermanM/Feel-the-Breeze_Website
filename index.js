@@ -100,6 +100,9 @@ $(document).ready(function() {
 // Enable popovers
 $(function () {
   $('[data-toggle="popover"]').popover()
-})
+});
 
-
+// Collapse menu on section click
+$(".nav-link").click(function() {
+    $('#collapsingNavbar').collapse('toggle');
+});
