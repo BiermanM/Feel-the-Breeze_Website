@@ -135,19 +135,20 @@ nav {
 }
 
 #testemonials {
-    padding: 150px;
+    padding-top: 150px;
+    padding-bottom: 150px;
     color: #fafafa;
     
     background-color: rgba(0, 0, 0, 0.2);
     background-blend-mode: color-dodge;
 }
-
+/*
 @media (max-width: 580px) {
     #testemonials {
         padding-left: 50px;
         padding-right: 50px;
     }
-}
+} */
 
 .section-title {
     margin-bottom: 50px;
