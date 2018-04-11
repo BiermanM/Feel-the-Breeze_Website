@@ -134,6 +134,21 @@ nav {
     padding-top: 186px;
 }
 
+#testemonials {
+    padding: 150px;
+    color: #fafafa;
+    
+    background-color: rgba(0, 0, 0, 0.2);
+    background-blend-mode: color-dodge;
+}
+
+@media (max-width: 580px) {
+    #testemonials {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
 .section-title {
     margin-bottom: 50px;
 }
@@ -178,18 +193,6 @@ nav {
 
 #qg-logo {
     max-height: 100px;
-}
-
-@media (max-width: 576px) and (min-width: 767px) {
-    #bbb-logo {
-        margin-top: 12.5px;
-        max-height: 25px;
-        margin-bottom: 12.5px;
-    }
-
-    #qg-logo {
-        max-height: 50px;
-    }
 }
 
 #mission-statement {
