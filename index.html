@@ -275,6 +275,19 @@
                         <div class="col-2"></div>
                     </div>
                 </div>
+                <div class="carousel-item container">
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-2 text-right">
+                            <i class="fas fa-2x fa-quote-left"></i>
+                        </div>
+                        <div class="col-6">
+                            <p>Feel the Breeze Shampoo and Conditioner leaves my hair as smooth as silk and its refreshing aroma lasts all day. I've been using this product for several weeks now and I'm so happy with the results! I highly recommend Feel the Breeze, as it makes me so much happier with my hair.</p>
+                            <h6><i>A. Estrellado</i></h6>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                </div>
             </div>
         </div>
         
@@ -305,78 +318,75 @@
             </div>
         </footer>
         
-        <!-- Modals -->
-        <div>
-            <!-- Contact Form Modal -->
-            <div class="modal fade" id="contact-form" tabindex="-1" role="dialog">
-                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                    <div class="modal-content">
-                        <form id="form" action="https://formspree.io/ftbreeze1@gmail.com" method="POST">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Contact Me</h5>
-                                <button type="button" class="close" data-dismiss="modal">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="container-fluid">
-                                    <div class="row form-group" style="margin-bottom: 0">
-                                        <div id="contactModalName" class="col-sm">
-                                            <div class="form-group" style="margin-bottom: 0px">
-                                                <input id="nameInput" type="text" class="form-control" name="Name" placeholder="Full Name">
-                                                <div id="nameError" class="form-control-feedback">Please fill out this field.</div>
-                                            </div>
-                                        </div>
-                                        <div id="contactModalEmail" class="col-sm">
-                                            <div class="form-group" style="margin-bottom: 0px">
-                                                <input id="emailInput" type="email" class="form-control" name="Email Address" placeholder="Email Address">
-                                                <div id="emailError" class="form-control-feedback">Please fill out this field.</div>
-                                            </div>
+        <!-- Contact Form Modal -->
+        <div class="modal fade" id="contact-form" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <form id="form" action="https://formspree.io/ftbreeze1@gmail.com" method="POST">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Contact Me</h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row form-group" style="margin-bottom: 0">
+                                    <div id="contactModalName" class="col-sm">
+                                        <div class="form-group" style="margin-bottom: 0px">
+                                            <input id="nameInput" type="text" class="form-control" name="Name" placeholder="Full Name">
+                                            <div id="nameError" class="form-control-feedback">Please fill out this field.</div>
                                         </div>
                                     </div>
-                                    <div class="row form-group" style="margin-bottom: 0">
-                                        <div id="contactModalPhone" class="col-sm">
-                                            <div class="form-group" style="margin-bottom: 0px">
-                                                <input type="text" class="form-control" name="phoneNumber" placeholder="Phone Number">
-                                            </div>
-                                        </div>
-                                        <div id="contactModalWebsite" class="col-sm">
-                                            <div class="form-group" style="margin-bottom: 0px">
-                                                <input id="websiteInput" type="text" class="form-control" name="Website" placeholder="Website">
-                                            </div>
+                                    <div id="contactModalEmail" class="col-sm">
+                                        <div class="form-group" style="margin-bottom: 0px">
+                                            <input id="emailInput" type="email" class="form-control" name="Email Address" placeholder="Email Address">
+                                            <div id="emailError" class="form-control-feedback">Please fill out this field.</div>
                                         </div>
                                     </div>
-                                    <div class="row form-group" style="margin-bottom: 0">
-                                        <div id="contactModalBody" class="col-sm">
-                                            <div class="form-group" style="margin-bottom: 0px">
-                                                <textarea id="bodyInput" class="form-control" rows="5" name="Message" placeholder="Ask me a question, express any concerns you may have, or just say hi!"></textarea>
-                                                <div id="bodyError" class="form-control-feedback">Please fill out this field.</div>
-                                            </div>
+                                </div>
+                                <div class="row form-group" style="margin-bottom: 0">
+                                    <div id="contactModalPhone" class="col-sm">
+                                        <div class="form-group" style="margin-bottom: 0px">
+                                            <input type="text" class="form-control" name="phoneNumber" placeholder="Phone Number">
+                                        </div>
+                                    </div>
+                                    <div id="contactModalWebsite" class="col-sm">
+                                        <div class="form-group" style="margin-bottom: 0px">
+                                            <input id="websiteInput" type="text" class="form-control" name="Website" placeholder="Website">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form-group" style="margin-bottom: 0">
+                                    <div id="contactModalBody" class="col-sm">
+                                        <div class="form-group" style="margin-bottom: 0px">
+                                            <textarea id="bodyInput" class="form-control" rows="5" name="Message" placeholder="Ask me a question, express any concerns you may have, or just say hi!"></textarea>
+                                            <div id="bodyError" class="form-control-feedback">Please fill out this field.</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <button id="sendEmail" type="submit" class="btn primary-color" value="Send">Send</button>
-                            </div>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="sendEmail" type="submit" class="btn primary-color" value="Send">Send</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-            
-            <!-- Coming Soon Modal -->
-            <div class="modal fade" id="coming-soon" tabindex="-1" role="dialog">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Coming Soon!</h5>
-                            <button type="button" class="close" data-dismiss="modal">
-                                <span>&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body" style="padding: 30px">
-                            We are in the process of getting Feel the Breeze Shampoo &amp; Conditioner available in the Amazon marketplace! In the meantime, shoot me an email using the contact form in the About page, and I can answer any questions you may have.
-                        </div>
+        </div>
+
+        <!-- Coming Soon Modal -->
+        <div class="modal fade" id="coming-soon" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Coming Soon!</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style="padding: 30px">
+                        We are in the process of getting Feel the Breeze Shampoo &amp; Conditioner available in the Amazon marketplace! In the meantime, shoot me an email using the contact form in the About page, and I can answer any questions you may have.
                     </div>
                 </div>
             </div>
