@@ -72,7 +72,7 @@
                 </ul>
                 <ul id="navbar-button" class="nav ml-auto justify-content-end">
                     <li class="nav-item">
-                        <a class="btn primary-color-outline" data-toggle="modal" data-target="#coming-soon">Purchase</a>
+                        <a class="btn primary-color-outline" data-toggle="modal" data-target="#purchase">Purchase</a>
                     </li>
                 </ul>
             </div>
@@ -154,19 +154,38 @@
                             <div id="product-accordian-purchase" class="collapse" data-parent="#product-accordion">
                                 <div class="card-body">
                                     <div class="row text-center">
-                                        <div class="col-xs-12 col-lg-4">
-                                            <a class="btn btn-product-purchase btn-primary btn-lg primary-color" data-toggle="modal" data-target="#coming-soon"><i class="fab fa-amazon fa-sm"></i> Amazon</a>
+                                        <div class="col">
+                                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                                <input type="hidden" name="cmd" value="_s-xclick">
+                                                <input type="hidden" name="hosted_button_id" value="N8B5HD7HVRGBS">
+                                                <table style="margin: auto">
+                                                    <tr><td><input type="hidden" name="on0" value="Select Product">Select Product</td></tr>
+                                                    <tr><td><select name="os0">
+                                                        <option value="Shampoo">Shampoo $15.00 USD</option>
+                                                        <option value="Conditioner">Conditioner $15.00 USD</option>
+                                                        <option value="Shampoo & Conditioner">Shampoo &amp; Conditioner $25.00 USD</option>
+                                                    </select></td></tr>
+                                                </table>
+                                                <br>
+                                                <input type="hidden" name="currency_code" value="USD">
+                                                <button type="submit" class="btn btn-product-purchase btn-primary btn-lg primary-color"><i class="fab fa-paypal fa-sm"></i> PayPal</button>
+                                            </form>
+                                        </div>
+
+                                        <!-- <div class="col-xs-12 col-lg-4">
+                                            <a class="btn btn-product-purchase btn-primary btn-lg primary-color" data-toggle="modal" data-target="#purchase"><i class="fab fa-amazon fa-sm"></i> Amazon</a>
                                         </div>
                                         <div class="col-xs-12 col-lg-4">
                                             <button type="button" class="btn btn-product-purchase btn-primary btn-lg primary-color-disabled" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Coming soon!">
                                                 <span><i class="fab fa-paypal fa-sm"></i> PayPal</span>
                                             </button>
+                                            
                                         </div>
                                         <div class="col-xs-12 col-lg-4">
                                             <button type="button" class="btn btn-product-purchase btn-primary btn-lg primary-color-disabled" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Coming soon!">
                                                 <span><i class="far fa-credit-card fa-sm"></i> Credit</span>
                                             </button>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -380,18 +399,36 @@
             </div>
         </div>
 
-        <!-- Coming Soon Modal -->
-        <div class="modal fade" id="coming-soon" tabindex="-1" role="dialog">
+        <!-- Purchase Modal -->
+        <div class="modal fade" id="purchase" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Coming Soon!</h5>
+                        <h5 class="modal-title">Order <i>Feel the Breeze</i> Now!</h5>
                         <button type="button" class="close" data-dismiss="modal">
                             <span>&times;</span>
                         </button>
                     </div>
                     <div class="modal-body" style="padding: 30px">
-                        We are in the process of getting <i>Feel the Breeze</i> Shampoo &amp; Conditioner available in the Amazon marketplace! In the meantime, shoot me an email using the contact form in the About page, and I can answer any questions you may have.
+                        <div class="row text-center">
+                            <div class="col">
+                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+                                    <input type="hidden" name="hosted_button_id" value="N8B5HD7HVRGBS">
+                                    <table style="margin: auto">
+                                        <tr><td><input type="hidden" name="on0" value="Select Product">Select Product</td></tr>
+                                        <tr><td><select name="os0">
+                                            <option value="Shampoo">Shampoo $15.00 USD</option>
+                                            <option value="Conditioner">Conditioner $15.00 USD</option>
+                                            <option value="Shampoo & Conditioner">Shampoo &amp; Conditioner $25.00 USD</option>
+                                        </select></td></tr>
+                                    </table>
+                                    <br>
+                                    <input type="hidden" name="currency_code" value="USD">
+                                    <button type="submit" class="btn btn-product-purchase btn-primary btn-lg primary-color"><i class="fab fa-paypal fa-sm"></i> PayPal</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
