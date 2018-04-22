@@ -264,8 +264,9 @@ nav {
     margin-top: 15px;
 }
 
-#about-btn {
+.about-btn {
     width: 160px;
+    margin: 5px;
 }
 
 #gallery {
