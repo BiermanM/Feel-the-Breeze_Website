@@ -104,5 +104,6 @@ $(function () {
 
 // Collapse menu on section click
 $(".nav-link").click(function() {
+$(".nav-link").click(function() {
     $('#collapsingNavbar').collapse('toggle');
 });
