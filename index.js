@@ -35,11 +35,39 @@ $(window).resize(function() {
     menuSizing();
 });
 
+$("#product-accordion-card-1").on('shown.bs.collapse', function () {
+    fixProduct();
+    $(window).trigger('resize.px.parallax');
+});
+$("#product-accordion-card-2").on('shown.bs.collapse', function () {
+    fixProduct();
+    $(window).trigger('resize.px.parallax');
+});
+$("#product-accordion-card-3").on('shown.bs.collapse', function () {
+    fixProduct();
+    $(window).trigger('resize.px.parallax');
+});
+$("#product-accordion-card-1").on('hidden.bs.collapse', function () {
+    fixProduct();
+    $(window).trigger('resize.px.parallax');
+});
+$("#product-accordion-card-2").on('hidden.bs.collapse', function () {
+    fixProduct();
+    $(window).trigger('resize.px.parallax');
+});
+$("#product-accordion-card-3").on('hidden.bs.collapse', function () {
+    fixProduct();
+    $(window).trigger('resize.px.parallax');
+});
+
 function fixProduct() {
     // Resize product div (accordian overflows on small/medium sized screen)
-    if ($(window).width() > 575)
-        $("#product").height($("#product-title").height() + $("#product-accordion-card-1").height() + $("#product-accordion-card-2").height() + $("#product-accordion-card-3").height());
-    else
+    if ($(window).width() > 575) {
+        if (($("#product-title").height() + $("#product-accordion-card-1").height() + $("#product-accordion-card-2").height() + $("#product-accordion-card-3").height()) > 400)
+            $("#product").height($("#product-title").height() + $("#product-accordion-card-1").height() + $("#product-accordion-card-2").height() + $("#product-accordion-card-3").height());
+        else
+            $("#product").height(520);
+    } else
         $("#product").height($("#product-title").height() + $(".product-img").height() + $("#product-accordion-card-1").height() + $("#product-accordion-card-2").height() + $("#product-accordion-card-3").height());
     
     // Make product images smaller for extra-small screens
