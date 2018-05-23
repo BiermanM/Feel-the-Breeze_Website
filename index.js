@@ -1,5 +1,5 @@
-$('.slick-slider').each(function() {
-    $(this).slick("getSlick").refresh();
+$( document ).ready(function() {
+    $('#gallery-carousel').resize();
 });
 
 // Enable scrollspy
