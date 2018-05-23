@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    $('#gallery-carousel').resize();
+    $(window).trigger('resize');
 });
 
 // Enable scrollspy
