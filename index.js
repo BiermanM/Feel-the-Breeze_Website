@@ -1,7 +1,3 @@
-$( document ).ready(function() {
-    $(window).trigger('resize');
-});
-
 // Enable scrollspy
 $('body').scrollspy({target: "#navbar-scrollspy", offset: 77});
 
