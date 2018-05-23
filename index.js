@@ -1,3 +1,70 @@
+// Image Preloading
+function preloader() {
+	if (document.images) {
+		var img1 = new Image();
+		var img2 = new Image();
+		var img3 = new Image();
+		var img4 = new Image();
+		var img5 = new Image();
+		var img6 = new Image();
+		var img7 = new Image();
+		var img8 = new Image();
+		var img9 = new Image();
+		var img10 = new Image();
+		var img11 = new Image();
+		var img12 = new Image();
+		var img13 = new Image();
+		var img14 = new Image();
+		var img15 = new Image();
+		var img16 = new Image();
+		var img17 = new Image();
+		var img18 = new Image();
+		var img19 = new Image();
+		var img20 = new Image();
+		var img21 = new Image();
+		var img22 = new Image();
+		var img23 = new Image();
+
+		img1.src = "images/about.jpg";
+		img2.src = "images/background1.jpeg";
+		img3.src = "images/background2.jpeg";
+        img4.src = "images/background3.jpeg";
+        img5.src = "images/BBB%20Logo.png";
+        img6.src = "images/conditioner.png";
+        img7.src = "images/gallery_01.jpg";
+        img8.src = "images/gallery_02.jpg";
+        img9.src = "images/gallery_03.jpg";
+        img10.src = "images/gallery_04.jpg";
+        img11.src = "images/gallery_05.jpg";
+        img12.src = "images/gallery_06.jpg";
+        img13.src = "images/gallery_07.jpg";
+        img14.src = "images/gallery_08.jpg";
+        img15.src = "images/gallery_09.jpg";
+        img16.src = "images/gallery_10.jpg";
+        img17.src = "images/gallery_11.jpg";
+        img18.src = "images/Icon%20Green.png";
+        img19.src = "images/Icon%20White.png";
+        img20.src = "images/Logo%20Green.png";
+        img21.src = "images/Logo%20White.png";
+        img22.src = "images/Quality%20Guaranteed.png";
+        img23.src = "images/shampoo.png";
+	}
+}
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(preloader);
+
 // Enable scrollspy
 $('body').scrollspy({target: "#navbar-scrollspy", offset: 77});
 
